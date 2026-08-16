@@ -14,6 +14,11 @@
             "email": "george@omniti.com",
             "name": "George Schlossnagle",
             "role": "Lead"
+        },
+        {
+            "name": "SL-Gundam",
+            "role": "Maintainer",
+            "homepage": "https://github.com/SL-Gundam"
         }
     ],
     "autoload": {
@@ -21,12 +26,12 @@
             "Net": "./"
         }
     },
-    "description": "More info available on: http://pear.php.net/package/Net_POP3",
+    "description": "Fork of pear/Net_POP3 with fixes/improvements for EmailReporting",
     "include-path": [
         "./"
     ],
     "license": "BSD",
-    "name": "pear/net_pop3",
+    "name": "sl-gundam/net_pop3",
     "support": {
         "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Net_POP3",
         "source": "https://github.com/pear/Net_POP3"

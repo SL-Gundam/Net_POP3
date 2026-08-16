@@ -1,3 +1,11 @@
+## Fork Information
+
+This repository is a fork of pear/Net_POP3.
+
+The fork contains modifications required by the EmailReporting plugin for MantisBT and is maintained by SL-Gundam.
+
+
+## Original README
 This package is http://pear.php.net/package/Net_POP3 and has been migrated from http://svn.php.net/repository/pear/packages/Net_POP3
 
 Please report all new issues via the PEAR bug tracker.
