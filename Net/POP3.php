@@ -318,6 +318,8 @@ IMPLEMENTATION Shlemazle-Plotz-v302
 
                 switch ($capa) {
                     case 'sasl':
+                    // ERP-modification: Fix for 'Undefined array key 1' if explode returns one value
+                    //$this->_capability[$capa] = isset($arg) ? explode(' ', $arg) : array();
                     $this->_capability[$capa] = isset($arg) ? preg_split('/\s+/', trim($arg)) : array();
                         break;
                 default:
