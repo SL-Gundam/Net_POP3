@@ -282,6 +282,17 @@ class Net_POP3
     * Parses the response from the capability command. Stores
     * the result in $this->_capability
     *
+    * // ERP-modification: Example data of CAPA (SASL arguments can be empty):
+TOP
+USER
+SASL CRAM-MD5 KERBEROS_V4
+RESP-CODES
+LOGIN-DELAY 900
+PIPELINING
+EXPIRE 60
+UIDL
+IMPLEMENTATION Shlemazle-Plotz-v302
+    *
     * @access private
     */
     function _parseCapability()
@@ -298,7 +309,9 @@ class Net_POP3
 
         for ($i = 0; $i < count($data); $i++) {
 
-            list($capa, $arg) = explode(' ', $data[$i], 2);
+            // ERP-modification: Fix for 'Undefined array key 1' if explode returns one value
+            //list($capa, $arg) = explode(' ', $data[$i], 2);
+            list($capa, $arg) = array_pad(preg_split('/\s+/', trim($data[$i]), 2), 2, null);
 
             if(isset($capa)) {
                 $capa = strtolower($capa);
