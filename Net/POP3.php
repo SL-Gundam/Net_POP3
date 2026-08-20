@@ -318,7 +318,7 @@ IMPLEMENTATION Shlemazle-Plotz-v302
 
                 switch ($capa) {
                     case 'sasl':
-                    $this->_capability[$capa] = isset($arg) ? explode(' ', $arg) : array();
+                    $this->_capability[$capa] = isset($arg) ? preg_split('/\s+/', trim($arg)) : array();
                         break;
                 default:
                     $this->_capability[$capa] = isset($arg) ? $arg : 1;
